@@ -1,8 +1,8 @@
 const titles = [
-    "Desenvolvedor Python", 
-    "Desenvolvedor Web", 
-    "Cientista de Dados", 
-    "Desenvolvedor de Software"];
+    "Python Developer", 
+    "Web Developer", 
+    "Data Science", 
+    "Software Developer"];
 
 
 let currentIndex = 0;
@@ -12,7 +12,7 @@ let currentIndex = 0;
 function trocarTituloComAnimacao() {
     const titleElement = document.getElementById("title");
 
-    const originalTitle = "Desenvolvedor Backend"; 
+    const originalTitle = "Backend Developer"; 
 
     titleElement.style.animation = 'fade 1s forwards';
 
@@ -106,8 +106,8 @@ toggleButton.addEventListener('click', () => {
 
     // Alterna o texto do botão
     if (introSection.classList.contains('white-mode')) {
-        toggleButton.textContent = 'Modo Escuro'; 
+        toggleButton.textContent = 'Dark Theme'; 
     } else {
-        toggleButton.textContent = 'Modo Claro'; 
+        toggleButton.textContent = 'White Theme'; 
     }
 });

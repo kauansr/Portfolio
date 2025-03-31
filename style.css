@@ -12,8 +12,8 @@ html {
 
 body{
     font-family: Arial, sans-serif;
-    background-color: #fffdfd;
-    color: #333;
+    background-color: #000000;
+    color: #ffffff;
     overflow-x: hidden;
 }
 
@@ -28,6 +28,10 @@ header {
     padding: 20px;
     width: 100%;
     box-shadow: 0 2px 5px 0 rgb(40, 6, 70);
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 1000;
 }
 
 .logo {
@@ -59,6 +63,7 @@ header ul li a {
     position: relative;
 }
 
+
 header ul li a::after {
     content: '';
     position: absolute;
@@ -75,7 +80,6 @@ header ul li a:hover::after{
    left: 0;
 }
 
-
 /* Sections style*/
 
 section {
@@ -84,6 +88,7 @@ section {
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
+    padding-top: 100px;
 }
 
 h2{
@@ -112,9 +117,7 @@ h2{
 }
 
 /* Intro */
-#intro{
-    background-color: rgb(0, 0, 0);
-}
+
 .intro {
     display: flex;
     flex-direction: column;
@@ -129,7 +132,7 @@ h2{
     font-weight: 400;
     margin: 0;
     padding: 0;
-    margin-top: 4rem;
+    padding-top: 4rem;
     color: rgb(97, 97, 97);
     letter-spacing: 0.4rem;
     text-shadow: 
@@ -207,9 +210,6 @@ h2{
 }
 
 /* Section sobre*/
-#sobre{
-    background-color: rgb(0, 0, 0);
-}
 .sobre {
     display: flex;
     flex-direction: column;
@@ -238,10 +238,13 @@ h2{
 
 
 .sobre p {
+    align-self: center;
+    justify-content: center;
     font-size: 1.4rem;
     font-weight: 500;
     margin: 0;
     word-spacing: 2px;
+    line-height: 1.8;
     color: rgb(170, 170, 170);
 }
 
@@ -269,9 +272,6 @@ h2{
 
 
 /* Projetos */
-#projetos {
-    background-color: rgb(0, 0, 0);
-}
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -279,7 +279,6 @@ h2{
     max-width: 100%;
     max-height: 100%;
     margin: 0 auto;
-    margin-top: 1rem;
     margin-left: 5rem;
     margin-right: 5rem;
 }
@@ -292,7 +291,7 @@ h2{
     padding: 20px;
     border: 1px solid #147477;
     border-radius: 4px;
-    margin: 50px;
+    margin: 4px;
     flex: 1 1 calc(50% - 20px);
     height: auto;
     transition: 1s ease;
@@ -378,9 +377,6 @@ h2{
 
 
 /* Habilidades */
-#habilidades {
-    background-color: rgb(0, 0, 0);
-}
 .container-habilidades {
     display: flex;
     flex-wrap: wrap;
@@ -435,28 +431,6 @@ h2{
     margin-bottom: 2rem;
 }
 
-.barra-progresso {
-    width: 100%;
-    height: 10px;
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-
-.nivel-barra {
-    height: 100%;
-    border-radius: 5px;
-}
-
-.avancado {
-    width: 90%; 
-    background-color: rgb(0, 128, 107);
-}
-
-.intermediario {
-    width: 60%; 
-    background-color: yellow;
-}
 
 
 /*retorno botao*/
@@ -485,10 +459,6 @@ h2{
 
 
 /* eu */
-#contato {
-    background-color: #000000;
-}
-
 .container-contato{
     display: flex;
     flex-wrap: wrap;
@@ -527,6 +497,21 @@ h2{
     display: inline-block;
     padding: 15px;
     margin: 0;
+}
+
+.container-contato button{
+    background-color: #09383a;
+    color: #147477;
+    border: 1px #0a3a3b solid;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 1.2rem;
+    transition: 1s ease;
+}
+
+.container-contato button:hover{
+    transform: scale(1.1);
+    background-color: #083f41;
 }
 
 
@@ -592,86 +577,160 @@ footer {
 }
 
 
-/* Estilos para telas médias (tablets) */
-@media (min-width: 768px) and (max-width: 1199px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    header ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    .container {
-        flex-wrap: wrap;
-        margin: 0 20px; 
-    }
-
-    .projeto {
-        flex: 1 1 300px; 
-        height: auto; 
-    }
+#top.white-mode,
+#intro.white-mode, 
+#sobre.white-mode, 
+#projetos.white-mode, 
+#habilidades.white-mode, 
+#contato.white-mode,
+#footer.white-mode {
+    background-color: white !important;
+    color: #333  !important;
 }
 
-/* Estilos para telas pequenas (smartphones) */
-@media (max-width: 767px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
+#intro.white-mode h2{
+    color: rgb(0, 0, 0);
+}
 
-    header ul {
-        flex-direction: column;
-        margin: 0;
-    }
+#sobre.white-mode p{
+    color: #000000;
+}
 
-    header ul li {
-        padding: 10px;
-    }
 
-    .container {
-        margin: 0 10px;
+#habilidades.white-mode .habilidades{
+    background-color: white;
+}
+
+#top.white-mode button{
+    background-color: white;
+    color: #000000;
+}
+
+header button{
+    background-color: #000000;
+    color: white;
+    border-radius: 4px;
+    padding: 4px;
+    border: 1px solid #095255;
+}
+
+
+#contato.white-mode button{
+    color: #ffffff;
+    background-color: #0f7a7e;
+}
+
+
+/* Responsividade */
+
+/* Telas menores que 1200px */
+@media (max-width: 1200px) {
+    .container, .container-habilidades {
+        margin-left: 2rem;
+        margin-right: 2rem;
     }
 
     .projeto {
         flex: 1 1 100%;
-        height: auto; 
-        margin: 10px 0;
     }
 
     .habilidades {
-        flex: 1 1 calc(100% - 20px);
-        height: auto;
-    }
-
-    h2, .sobre h1, .sobre h3, .sobre p {
-        font-size: 1.5rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-    }
-
-    .sobre ul {
-        margin-right: 0;
-        text-align: center;
-    }
-
-    .sobre ul li {
-        padding: 10px;
+        flex: 1 1 calc(33.33% - 20px);
     }
 }
 
+/* Tablets - Telas menores que 992px */
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
 
-/* Estilos para telas grandes (desktops) */
-@media (min-width: 1200px) {
-    .projeto {
-        flex: 1 1 calc(33.33% - 20px);
+    header ul {
+        margin: 10px 0;
+    }
+
+    .intro h2{
+        padding-top: 10rem;
+    }
+
+    .container, .container-habilidades {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .habilidades {
-        flex: 1 1 calc(20% - 20px);
+        flex: 1 1 calc(50% - 20px);
+    }
+
+    .carrossel {
+        width: 100%;
+        height: auto;
+    }
+
+    .imagens img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Celulares - Telas menores que 768px */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 3rem;
+        letter-spacing: 0.8rem;
+    }
+
+    .intro h1 {
+        font-size: 3.5rem;
+    }
+
+    .projeto, .habilidades {
+        flex: 1 1 100%;
+    }
+
+    .container-contato ul {
+        margin: 5rem 0;
+    }
+
+    .container-contato img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Celulares pequenos - Telas menores que 480px */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 2.5rem;
+        letter-spacing: 0.5rem;
+    }
+
+    .intro h2 {
+        padding-top: 20rem;
+    }
+
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro div {
+        font-size: 1.5rem;
+    }
+
+    header ul li {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .container-contato ul {
+        margin: 3rem 0;
+    }
+
+    .container-contato img {
+        width: 150px;
+        height: 150px;
     }
 }

@@ -104,10 +104,4 @@ toggleButton.addEventListener('click', () => {
     header.classList.toggle('white-mode');
     footer.classList.toggle('white-mode');
 
-    // Alterna o texto do botão
-    if (introSection.classList.contains('white-mode')) {
-        toggleButton.textContent = 'Dark Theme'; 
-    } else {
-        toggleButton.textContent = 'White Theme'; 
-    }
 });

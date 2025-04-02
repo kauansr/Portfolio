@@ -609,15 +609,15 @@ footer {
 header button{
     background-color: #000000;
     color: white;
-    border-radius: 4px;
-    padding: 4px;
+    border-radius: 50px;
+    padding: 15px;
     border: 1px solid #095255;
 }
 
 
 #contato.white-mode button{
     color: #ffffff;
-    background-color: #0f7a7e;
+    background-color: #0c3c3d;
 }
 
 

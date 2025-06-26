@@ -292,6 +292,7 @@ h2{
     border: 1px solid #147477;
     border-radius: 4px;
     margin: 4px;
+    margin-top: 2rem;
     flex: 1 1 calc(50% - 20px);
     height: auto;
     transition: 1s ease;
@@ -315,7 +316,7 @@ h2{
 .carrossel {
     overflow: hidden;
     width: 600px;
-    height: 400px; 
+    height: auto; 
     position: relative;
     margin: 0;
     margin-top: 2rem;

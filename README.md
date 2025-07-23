@@ -1,5 +1,5 @@
-# Portifolio
-- Isso e meu portifolio em Pt-br e em En.
+# Portfolio
+- My portfolio in Brazilian portuguese and English.
 
-## Tecnologias usadas
+## Stack used
 - HTML, CSS, JavaScript.

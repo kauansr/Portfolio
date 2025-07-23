@@ -208,6 +208,16 @@ h2{
     font-size: 1.4rem;
     font-weight: 400;
 }
+.downloadcv{
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: #ffffff;
+    background-color: #2e2e2e;
+}
 
 /* Section sobre*/
 .sobre {
@@ -591,6 +601,11 @@ footer {
 
 #intro.white-mode h2{
     color: rgb(0, 0, 0);
+}
+
+#intro.white-mode .downloadcv{
+    color: #000000;
+    background-color: whitesmoke;
 }
 
 #sobre.white-mode p{

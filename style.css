@@ -212,6 +212,7 @@ h2{
     font-size: 1.4rem;
     font-weight: 400;
     color: #ececec;
+    background-color: #000000;
     border: 1px solid #0c5c5f;
     border-radius: 4px;
     text-decoration: none;
@@ -605,8 +606,8 @@ footer {
 }
 
 #intro.white-mode .downloadcv a{
-    color: #000000;
-    background-color: whitesmoke;
+    color: #136b58;
+    background-color: rgb(245, 245, 245);
 }
 
 #sobre.white-mode p{

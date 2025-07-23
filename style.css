@@ -208,15 +208,16 @@ h2{
     font-size: 1.4rem;
     font-weight: 400;
 }
-.downloadcv{
-    text-decoration: none;
+.downloadcv a{
     font-size: 1.4rem;
     font-weight: 400;
-    padding: 15px;
-    border: 1px solid black;
+    color: #ececec;
+    border: 1px solid #0c5c5f;
     border-radius: 4px;
-    color: #ffffff;
-    background-color: #2e2e2e;
+    text-decoration: none;
+    transition: 1s ease;
+    margin: 0;
+    padding: 15px;
 }
 
 /* Section sobre*/
